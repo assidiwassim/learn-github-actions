@@ -1,4 +1,4 @@
-name: workflow-2
+name: workflow-3
 run-name: ${{ github.actor }} is learning GitHub Actions
 # Controls when the workflow will run
 on:
