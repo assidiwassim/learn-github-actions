@@ -16,4 +16,4 @@ jobs:
         run: docker build -t nodejs-image .
 
       - name: Verification of images
-          run: docker images
+        run: docker images
