@@ -1,6 +1,13 @@
 name: workflow-2
 run-name: ${{ github.actor }} is learning GitHub Actions
-on: [push]
+# Controls when the workflow will run
+on:
+  # Triggers the workflow on push or pull request events but only for the "main" branch
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+    
 jobs:
   check-bats-version:
     runs-on: ubuntu-latest
