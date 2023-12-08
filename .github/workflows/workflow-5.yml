@@ -1,0 +1,19 @@
+name: workflow-5
+run-name: ${{ github.actor }} is learning GitHub Actions
+# Controls when the workflow will run
+on:
+  # Triggers the workflow on push or pull request events but only for the "main" branch
+  push:
+    branches: [ "main" ]
+
+jobs:
+  build-docker-image:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Build nodejs with Docker
+        run: docker build -t nodejs-image .
+
+      - name: Verification of images
+          run: docker images
