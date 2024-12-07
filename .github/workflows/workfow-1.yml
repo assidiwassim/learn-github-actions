@@ -6,7 +6,7 @@ name: Workflow-1
 on:
   # Triggers the workflow on push or pull request events but only for the "main" branch
   push:
-    branches: [ "main" ]
+    branches: [ "main-test" ]
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
@@ -21,10 +21,6 @@ jobs:
       - uses: actions/checkout@v3
 
       # Runs a single command using the runners shell
-      - name: check files 
-        run: ls
-
-      # Runs a single command using the runners shell
       - name: Run a one-line script
         run: echo Hello, world!
 
@@ -32,4 +28,4 @@ jobs:
       - name: Run a multi-line script
         run: |
           echo Add other actions to build,
-          echo test, and deploy your project.
+          echo test, and deploy your project.   
