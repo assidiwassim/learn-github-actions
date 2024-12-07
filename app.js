@@ -5,7 +5,11 @@ const calculate = require('./calculate')
 
 
 app.get("/", (req, res) => {
-  res.send("Sum = ",calculate.sum(1,1));
+  res.status(200).send({sum:calculate.sum(1,1)});
+});
+
+app.get("/users", (req, res) => {
+  res.status(200).send({users:[]});
 });
 
 app.listen(port, () => {
