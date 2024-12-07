@@ -1,9 +1,8 @@
-name: workflow-6
+name: workflow-4
 
 on:
-  # Triggers the workflow on push or pull request events but only for the "main" branch
   push:
-    branches: [ "dev-test" ]
+    branches: [ "main" ]
 
 
 jobs:
